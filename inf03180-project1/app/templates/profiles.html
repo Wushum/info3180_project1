@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container">
+	<h1>List Profiles</h1>
+
+	<div class="collection">
+		{% for user in users %}
+			<a href="{{ url_for('show_profile', id=user.id)}}" class="collection-item">{{ user.first_name }} {{ user.last_name }}</a>
+		{% endfor %}
+	</div>
+
+	<a class="btn wave-effect" href="{{ url_for('new_profile') }}">Create Profile</a>
+</div>
+{% endblock %}

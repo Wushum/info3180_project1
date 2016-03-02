@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container row">
+	<div class="col s6">
+		<img src="{{ '/static/filefolder/' + user.image }}"/>	
+	</div>
+
+	<div class="col s6">
+		<h1>{{ user.first_name }} {{ user.last_name }}</h1>
+
+		<p>{{ user.gender }}</p>
+		<p>{{ user.age }}</p>	
+		<p>{{ user.userid }}</p>
+	</div>
+	
+</div>
+{% endblock %}
